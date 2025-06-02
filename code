@@ -1,0 +1,22 @@
+#include<Wi-Fi.h>
+#include<Wi-FiClient.h>
+#include<BlynkSmipleEsp32
+char auth[]="FHEbN-TC08teMWualEqotBmROdjY01I"
+char ssid[]="home";
+char pass[]="12345678";
+void setup()
+{
+  pinMode(14,OUTPUT);
+  pinMode(27,OUTPUT);
+  pinMode(26,OUTPUT);
+  pinmode(25,OUTPUT);
+  digitalWrite(14,HIGH);
+  digitalWrite(27,HIGH);
+  digitalWrite(26,HIGH);
+  digitalWrite(25,HIGH);
+Blynk.begin(auth,ssid,pass);
+}
+void loop()
+{
+  Blynk.run();
+}
